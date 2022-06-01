@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éres lo DOM</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }   
+
+         body{
+            background-color: rgb(34, 32, 32);
+            font: italic 20px times new roman;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        } 
+
+         h1{
+            color: rgb(7, 7, 7)
+        } 
+
+        div#area{
+            
+            font: normal 12px Arial;
+            background: rgb(12, 129, 119);
+            color: black;
+            width: 400px;
+            font-style: oblique;
+            text-align: center;
+        }
+
+        input#campo1{ 
+            background-color: black;
+            /* font: bold 15px comic sans MS;  */
+            width: 115px;
+            height: 15px;
+            font-style: italic 10px comic sans MS;
+            color: white;
+        }
+
+        input#campo2{
+            background-color: black;
+            /* font: bold 15px comic sans MS;  */
+            width: 115px;
+            height: 15px;
+            font-style: italic 10px comic sans MS;
+            color: white;
+        }
+
+        div#x{
+            margin-top: 20px;
+            font:  normal 20px ;
+            color:cyan;  
+        }
+
+        div#y{
+            margin-top: 40px;
+            font:  normal 20px ;
+            color:rgb(255, 255, 255);
+            background-color: teal;  
+        }
+
+        div#resp{
+            margin-top: 0px;
+            font:  normal 20px ;
+            color:rgb(255, 255, 255);
+            background-color: teal;  
+        }
+    </style>
+</head>
+<body>
+    <div id='area'>
+    <h1>
+        Agora é a prática, tendeu ?
+    </h1>
+    
+    <input type="number" id="campo1" > +
+    <input type="number" id="campo2">
+    <input type="button" value="=" id="b1" onclick="somastes()">
+    <div id="x"></div>
+    <div id="y"></div> 
+    <div id="resp"></div> 
+    </div>
+
+    <script>
+
+        function somastes(){
+            var n1 = window.document.querySelector('campo1')   
+            var n2 = window.document.querySelector('campo2')
+            n1 = Number(campo1.value)
+            n2 = Number(campo2.value)
+           console.log(n1) // retorna no console do navegador oque a variavel ta segurando
+           console.log(n2)
+
+            if (n1 == 0 && n2 == 0){ 
+                alert("Campos numéricos estão vazio(s)")
+                }else if ( 0 >= n1 || 0 >= n2){
+                    alert("Digite dois números válidos para realizar a comparação e soma")
+                    y.innerText = (`Digite o número que falta !`)
+                    resp.innerText = ('Números inválidos para a soma e a comparação')
+                }else {
+                    x.innerText = (`O resultado da soma entre ${n1} e ${n2} é igual a ${n1+n2}`)
+                      y.innerText = (`O número ${n1} é maior, igual, ou menor ao ${n2} ?` )
+                        if (n1 > n2 ) {
+                            resp.innerText = 'Maior'
+                        } else if (n1 < n2){
+                            resp.innerText = 'Menor'
+                        } else if (n1 = n2){
+                            resp.innerText = 'Igual' 
+                        }
+                }
+            }
+        
+        
+        var sla = window.document.getElementById('x')
+        sla.innerText = 'Comparações e somas estão por vir, basta colocar os números'
+        // var seg = window.document.getElementById('y')
+        // seg.innerText = (`O número ${n1} é maior que o ${n2} ? `)/*, n1 > n2 ? 'sim':'não'*/
+        var resp = window.document.getElementById('resp')
+        resp.innerText = 'Aguardando números para fazer a comparação'
+
+    </script>
+    </div>
+    
+</body>
+</html>

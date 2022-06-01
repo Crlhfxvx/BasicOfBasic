@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>é as multa, véi</title>
+    
+
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>As multa meu passero, tomou !!!</h1>
+    <p>Velocidade da caranga:
+    <input type="number" id="cp1"> Km/h
+    <input type="button" value="Análise" id ="bt1" onclick= "analise()">
+    </p>
+    <div id="velat"></div>
+    <div id="att"><br>Dirija sempre com cinto de segurança</div>
+    <script>
+23
+        function analise(){
+            var vel = Number(window.document.getElementById("cp1").value)
+            var fra1 = window.document.getElementById('velat')
+            console.log(vel)
+            if (vel > 110){
+                fra1.innerHTML = `A velocidade digitada é ${vel}, sendo assim voce <strong>tomô multa por excesso de velocitê`
+            } else {
+                fra1.innerHTML = `A velocidade digitada é ${vel}, então tu passou batido menó`
+            }
+        }
+
+    </script>
+</body>
+</html>

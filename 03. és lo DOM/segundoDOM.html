@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FXVX019</title>
+    <style>
+        body{
+            font: italic 15px Didot
+        }
+
+        div#res{
+           margin-top: 0px;
+           font:  normal 20px comic sans MS;
+           color:cyan;  
+           background-color: rgb(154, 47, 255);
+           
+        }
+
+        div#div{
+           margin-top: 0px;
+           font:  normal 20px comic sans MS;
+           color:cyan;  
+           background-color: rgb(154, 47, 255);
+           
+        }
+
+        input{
+            font: bold 18px didot;
+            width: 75px;
+        }
+
+        input#cp4{
+            margin-top: 40px;
+            width: 75px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Aprendeno matemáthica bázika com Fxvx</h1>
+   
+    <input type="number" name="cp1" id="cp1"> +
+    <input type="number" name="cp2" id="cp2">
+    <input type="button" value="=" id="b1" onclick="somar()">
+    <div id="res"></div>
+
+    <input type="number" name="cp3" id="cp3"> / 
+    <input type="number" name="cp4" id="cp4"> 
+    <input type="button" value="=" id="b2" onclick="dividindo()">
+    <div id="div"></div>
+
+
+    <script>
+        function somar(){
+        var cp1 = window.document.getElementById('cp1')
+        var cp2 = window.document.querySelector('input#cp2')
+        var n1  = Number(cp1.value)
+        var n2  = Number(cp2.value)
+        res.innerText = (`a soma duz numero é ${n1+n2}`)
+        res.innerHTML = (`a soma duz numero é <strong><u>${n1+n2}</u></strong>`)
+        }
+
+        function dividindo(){
+        // var cp3 = window.document.getElementById('cp3') ou pode ser igual a linha abaixo
+        var cp3 = Number((window.document.querySelector('input#cp3')).value)
+        var cp4 = Number((window.document.querySelector('input#cp4')).value)
+        // div.
+
+        div.innerText = (`a divizão duz numero é ${cp3/cp4}`)
+        div.innerHTML = (`a divizão duz numero é <strong><u>${cp3/cp4}</u></strong>`)
+        }
+       
+        var sty = window.document.getElementById('res')
+        sty.innerText = 'vai sai o resultado aq <----'
+        
+
+        var sty = window.document.querySelector('div#div')
+        sty.innerText = 'vai sai o resultado da divisão aq <----'
+        
+
+
+    </script>
+</body>
+</html>

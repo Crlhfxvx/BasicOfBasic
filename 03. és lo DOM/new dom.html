@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div#area{
+            font: normal 12px Arial;
+            background: yellow;
+            color: black;
+            width: 400px;
+            line-height: 200px ;
+            font-style: oblique;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id ='area' onclick="clicar()" onmouseenter="entrastes()" onmouseout="saistes()"> pode ser declarado os eventos assim 
+        ou colocar pelo addEventListener() declarado com a variavel  -->
+    <div id ='area'>
+        Interagir 25px
+    </div>
+
+    <script>
+
+    var a = window.document.querySelector('div#area')   
+    a.addEventListener('click',clicar) 
+    a.addEventListener('mouseenter',entrastes)
+    a.addEventListener('mouseout',saistes)
+    a.addEventListener('mousemove',mexendo(),paro(callback))
+    a.addEventListener(paro(callback))
+
+    function clicar(){
+    a.innerText = 'Interagido filho!'
+    a.style.background = 'black'
+    a.style.color = 'white'
+    }
+
+    function entrastes(){
+        a.innerText = 'Entrastes na área, filho !'
+    }
+
+    function saistes(){
+        a.innerText  = 'Saístes da área, filho !'
+        a.style.background = 'yellow'
+        a.style.color= 'black'
+    }
+
+    function mexendo(){
+        a.innerText = 'Ó o mouse mexendo ai fella'
+        a.style.background = 'pink'
+        a.style.color = 'cyan'
+    } 
+    
+    function paro(callback) {
+    var timer;
+
+    function stoppedMoving(evt) {
+        document.onmousemove = null;
+        callback();
+    }
+
+    function moveHandler(evt) {
+        evt = evt || window.event;
+        if (timer) {
+            window.clearTimeout(timer);
+        }
+        timer = window.setTimeout(function() {
+            stoppedMoving(evt);
+        }, 500);
+    }
+
+    document.onmousemove = mexendo;
+}
+
+waitForMouseStop(function() {
+    alert("Stopped");
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>CrlhFxvx019</title>
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&display=swap'); */
+
+        body{
+            color: white;
+            background-color: rgb(66, 82, 72);
+        }
+
+        /*Comentário em CSS*/
+
+        h1{
+           font:  normal 20px Comic Sans MS;
+           color:cyan;  
+           background-color: rgb(154, 47, 255);
+           
+        }
+    </style>
+
+    <h1>Chama filho, com nóis é sem erro</h1> <!-- Isso é um comentario  em  HTML-->
+    <p> Corre com nós, ou corre de nós </p>
+    <p> Já disse "Olá, Mundo" ontem, sendo assim já me livrei da maldição :D</p>
+
+</head>
+<body>
+
+    
+    <script>
+    /*  Formatações
+    Var s = 'JavaScript'    
+      s.length ----------> Define quantos caracteres tem a string
+      s.ToUpperCase()----> tudo para MAIÚSCULAS
+      s.ToLowerCase()----> tudo para minúsculas   
+    */   
+    var a1 = window.prompt('Digite uma letra:')                 //Solicita dados
+    var a2 = window.prompt('Digite uma outra letra:') 
+    var val= Number.parseFloat(window.prompt('Qual o valor do ovo na sua cidade?'))
+    window.alert('Concatenação das letras digitadas:  ' + a1 + a2 + '!')
+    var n1 = Number(window.prompt('Agora digite um número:'))   /* Ao invés de ser Number.parsefloat ou Number.parseInt, pode ser só Number()*/
+    var n2 = Number(window.prompt('Agora digite  outro número:'))
+    window.alert('Somação dos números:  ' + (n1 + n2) + '!')
+    window.alert('Concatenação:'+ String(n1) + String(n2))      //Concatenação e conversão dos dados para string
+    window.alert('Conversão 2º método:'+ n1.toString() + n2.toString())
+    window.alert(`Concatenação dos dados 2º método primeiro número ${n1} e segundo número ${n2}`)
+    val.toFixed(2).replace('.',',')
+
+    const xx = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL', maximumFractionDigits:4})
+    const gg = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'USD', maximumFractionDigits:4})  // meio que cria uma mascara para a formatação 
+
+  
+    document.write(`O valor do ovo em sua cidade é ${xx.format(val)}<br/>`)
+    document.write(`O valor do ovo em cifras de dolar, mas não convertido é assim, pega a fita ${gg.format(val)}<br/>`)
+
+
+
+    document.write(`O valor do ovo em sua cidade é ${val.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br/>`)
+    document.write(`O valor do ovo em cifras de dolar, mas não convertido é assim, pega a fita ${val.toLocaleString('pt-BR', {style: 'currency', 'currency':'USD'})}`)
+
+
+    </script>
+</body>
+</html>

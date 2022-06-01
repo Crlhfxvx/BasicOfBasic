@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É o DOM lelek</title>
+    <style>
+        body{
+            background-color: rgb(156, 156, 156);
+            color: rgb(255, 0, 0);
+            font: normal 25px comic sans MS 
+        }
+        
+        h1{
+            background-color: black;
+            color:white
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tamo adquirindo o DOM hehe</h1>
+    <p>Pega o resultado mané</p>
+    <p>Starting studies with <strong>DOM</strong></p>
+    <div>CLICA AQUI ZÉ RUELA</div>
+    <div id = "msn">aqui eu to pegando um objeto pelo "ID"</div>
+    <div name="msn2">aqui eu to pegando um objeto pelo "NAME"</div>
+    <div id = "a1" >teste para praticação do DOM</div>
+    <div class = "a2" >teste pra fazer com QUERY</div>
+    
+    <script>
+        window.document.write(window.document.URL)
+        window.document.write(window.navigator.appName)
+        window.document.write('<br>Salmonelas boyz<br>')
+
+        // var corpo = window.document.body
+        // corpo.style.background = (27, 27, 27);
+
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = '#ADFF2F'
+
+        var id = window.document.getElementById('msn')
+        id.style.background = 'red'
+        id.innerText = 'Salve o tricolor paulista'
+        id.style.color = 'black'
+
+        var nome = window.document.getElementsByName('msn2')[0]
+        nome.style.background = 'white'
+        nome.innerText = 'Amado clube brasileiro' /*texto original linha 24*/
+        nome.style.color= 'black'
+
+        var id2 = window.document.getElementById('a1')
+        id2.innerText ='Dentre os grande és o primeiro'
+        id2.style.background= 'black'
+        id2.style.color = 'white'
+
+        var QQ = window.document.querySelector('div.a2')
+        QQ.style.color = 'red'
+
+        window.document.write(`aqui eu peguei o conteudo do p1: ${p1.innerText}<br>`)
+        window.document.write(`salve ${id2.innerText}`)
+    </script>
+</body>
+</html>

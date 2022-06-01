@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montador de imagem</title>
+    <link rel="stylesheet" href="stilera.css">
+  
+</head>
+<body>
+    <header>
+     <h1 id="tit">Montagem das idades</h1>   
+    </header>
+
+    <section>
+        <div id="div1">
+            <p>Ano de nascimento:
+                <input type="number" id="ano" min="1">
+            </p>
+
+        </div>
+
+        <div id="div2">
+            Sexo: 
+            <input type="checkbox" name="Sexo" id="sexH">Masculino
+            <input type="checkbox" name="Sexo" id="sexM">Feminino
+
+            <!-- PARA FAZER COM RADIO BUTTONS 
+
+            <input type="radio" name="rad"  id="rH">
+            <label for="rH">Masculino</label>
+            <input type="radio" name="rad1" id="rM">
+            <label for="rM">Feminino</label> 
+    
+        -->
+        </div>
+        <br>
+        <input type="button" value="Montar" id="montar" onclick="montar()">
+        <br>
+
+        <div id="idade">Aqui sairá a idade da pessoa</div>
+
+        <div id="pic">
+            <img id="img" style="border-radius: 50%" width="250" height="250" src="imagens/x.jpg">
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; FavaÉoMelhor</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
